@@ -178,6 +178,24 @@ body.content-active #main-invitation{display:flex}
 .countdown-number{font-family:'Cinzel',serif;font-size:26px;font-weight:600;color:#fff;line-height:1}
 .countdown-label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);margin-top:6px}
 
+/* ITINERARIO (línea de tiempo) */
+.timeline{position:relative;width:100%;max-width:420px;margin:35px auto 10px;z-index:2;text-align:left}
+.timeline::before{content:'';position:absolute;left:21px;top:8px;bottom:30px;width:1px;background:linear-gradient(180deg,var(--gold-light),rgba(201,162,75,.15))}
+.tl-item{position:relative;padding:0 0 34px 60px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:'';position:absolute;left:11px;top:2px;width:21px;height:21px;border-radius:50%;border:1px solid var(--gold-light);
+  background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.95),rgba(230,205,138,.35) 55%,rgba(201,162,75,.2));box-shadow:0 0 12px rgba(230,205,138,.45)}
+.tl-time{font-family:'Cinzel',serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);font-weight:600}
+.tl-title{font-family:'Cormorant Garamond',serif;font-size:27px;color:#fff;line-height:1.25;margin-top:4px;font-weight:500}
+.tl-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:#D5DDF2;margin-top:2px}
+
+/* HOSPEDAJE */
+.hotel-card{width:100%;max-width:550px;margin:35px auto 0;background:#fff;padding:32px 20px 36px;border-radius:2px;border-top:3px solid var(--gold);box-shadow:0 15px 45px rgba(0,0,0,.25);position:relative;z-index:2;color:var(--text-dark)}
+.hotel-tag{font-family:'Cinzel',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.hotel-name{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--royal);font-weight:500;line-height:1.2;margin-top:6px}
+.hotel-card .map-box{height:260px;margin:22px auto 0}
+.hotel-card .btn-solid{margin-top:24px}
+
 /* MAPA */
 .map-box{width:100%;max-width:550px;height:320px;margin:30px auto;overflow:hidden;border-radius:2px;border:2px solid var(--gold);box-shadow:0 15px 40px rgba(0,0,0,.12);position:relative;z-index:2}
 .map-box iframe{width:100%;height:100%;border:none}
@@ -300,7 +318,7 @@ select.input-line{appearance:none;-webkit-appearance:none;text-align-last:center
       <div class="countdown-item"><div class="countdown-number" id="cd-seconds">00</div><div class="countdown-label">Seg</div></div>
     </div>
 
-    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV+A%C3%B1os+de+Aylin&dates=20270228T010000Z/20270228T070000Z&location=Sal%C3%B3n+de+Eventos+Santa+Sof%C3%ADa%2C+Av+Camino+a+la+Providencia%2C+Pueblo+Nuevo%2C+Mineral+de+la+Reforma%2C+Hgo.&details=Celebremos+juntos+este+d%C3%ADa+tan+especial" target="_blank" class="anim-element anim-fade-up delay-4 btn-solid">Agendar Evento</a>
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV+A%C3%B1os+de+Aylin&dates=20270227T230000Z/20270228T090000Z&location=Sal%C3%B3n+de+Eventos+Santa+Sof%C3%ADa%2C+Av+Camino+a+la+Providencia%2C+Pueblo+Nuevo%2C+Mineral+de+la+Reforma%2C+Hgo.&details=Celebremos+juntos+este+d%C3%ADa+tan+especial" target="_blank" class="anim-element anim-fade-up delay-4 btn-solid">Agendar Evento</a>
     <div class="wave bottom"></div>
   </section>
 
@@ -335,9 +353,37 @@ select.input-line{appearance:none;-webkit-appearance:none;text-align-last:center
       Itinerario
       <div class="sparkle" style="top:-10px;right:-20px"></div>
     </div>
-    <div class="anim-element anim-fade-up delay-2 info-data" style="margin-top:20px">7:00 p.m.</div>
-    <div class="anim-element anim-fade-up delay-3 body-serif" style="font-size:26px">Recepción</div>
-    <p class="anim-element anim-fade-up delay-3 body-serif" style="font-size:18px;margin-top:5px">Salón de Eventos Santa Sofía</p>
+    <div class="timeline">
+      <div class="anim-element anim-fade-up delay-1 tl-item">
+        <div class="tl-time">5:00 p.m.</div>
+        <div class="tl-title">Celebración Eucarística</div>
+      </div>
+      <div class="anim-element anim-fade-up delay-1 tl-item">
+        <div class="tl-time">7:00 p.m.</div>
+        <div class="tl-title">Recepción</div>
+        <div class="tl-sub">Salón de Eventos Santa Sofía</div>
+      </div>
+      <div class="anim-element anim-fade-up delay-1 tl-item">
+        <div class="tl-time">8:00 – 9:00 p.m.</div>
+        <div class="tl-title">Cena</div>
+      </div>
+      <div class="anim-element anim-fade-up delay-1 tl-item">
+        <div class="tl-time">10:30 p.m.</div>
+        <div class="tl-title">Baile de la Quinceañera</div>
+      </div>
+      <div class="anim-element anim-fade-up delay-1 tl-item">
+        <div class="tl-time">11:45 p.m.</div>
+        <div class="tl-title">Batucada</div>
+      </div>
+      <div class="anim-element anim-fade-up delay-1 tl-item">
+        <div class="tl-time">12:30 a.m.</div>
+        <div class="tl-title">Sonido y DJ</div>
+      </div>
+      <div class="anim-element anim-fade-up delay-1 tl-item">
+        <div class="tl-time">3:00 a.m.</div>
+        <div class="tl-title">Salida del Salón</div>
+      </div>
+    </div>
     <div class="wave bottom"></div>
   </section>
 
@@ -358,9 +404,39 @@ select.input-line{appearance:none;-webkit-appearance:none;text-align-last:center
     <a href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+de+Eventos+Santa+Sof%C3%ADa+Av+Camino+a+la+Providencia+Pueblo+Nuevo+42180+Mineral+de+la+Reforma+Hgo" target="_blank" class="anim-element anim-fade-up delay-4 btn-solid">Ver Ubicación</a>
   </section>
 
-  <!-- Dress Code -->
-  <section class="section-block bg-black">
+  <!-- Hospedaje -->
+  <section class="section-block bg-navy" style="padding-bottom:110px">
     <div class="wave top"></div><div class="wave top alt"></div>
+    <div class="bubble-layer"></div>
+    <svg class="section-icon anim-element anim-zoom delay-1" style="margin-top:30px" viewBox="0 0 24 24"><path d="M3 19V7M3 15h18v4M21 15v-3a3 3 0 00-3-3h-7v6M7 12.5a1.8 1.8 0 100-.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="anim-element anim-fade-up delay-1 info-title sparkle-container">
+      Hospedaje
+      <div class="sparkle" style="top:-10px;right:-20px"></div>
+    </div>
+    <div class="anim-element anim-fade-up delay-2 info-data" style="font-size:34px">Opciones para Hospedarte</div>
+    <p class="anim-element anim-fade-up delay-3 body-serif" style="margin:15px auto 0;font-size:20px">Si vienes de fuera, te sugerimos estas opciones en Pachuca para que disfrutes la noche sin preocupaciones.</p>
+
+    <div class="anim-element anim-zoom delay-2 hotel-card">
+      <div class="hotel-tag">Opción 1</div>
+      <div class="hotel-name">Hotel Blanco Pachuca</div>
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14986.81514825949!2d-98.72834244901469!3d20.104665601171433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1a7a207c5deb7%3A0x3e895e9e3d0f8a4c!2sHotel%20Blanco%20Pachuca!5e0!3m2!1ses-419!2smx!4v1795314214489!5m2!1ses-419!2smx" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/c6BwMZsa7vepnnDLA" target="_blank" class="btn-solid">Ver Hotel</a>
+    </div>
+
+    <div class="anim-element anim-zoom delay-2 hotel-card">
+      <div class="hotel-tag">Opción 2</div>
+      <div class="hotel-name">Posada del Ángel Pachuca</div>
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14988.078133631463!2d-98.72076244902027!3d20.091470301334283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1a72bf2721cd3%3A0xd5a7d4eda5cac38!2sPosada%20del%20%C3%81ngel%20Pachuca!5e0!3m2!1ses!2smx!4v1795314258124!5m2!1ses!2smx" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/Cgk7HG2jtr3EnwK7A" target="_blank" class="btn-solid">Ver Hotel</a>
+    </div>
+  </section>
+
+  <!-- Dress Code (continúa el degradado de Hospedaje, sin ola superior) -->
+  <section class="section-block bg-black">
     <div class="bubble-layer"></div>
     <svg class="section-icon anim-element anim-zoom delay-1" style="margin-top:30px" viewBox="0 0 24 24"><path d="M9 3l3 2 3-2 4 3-2 3-2-1v11H8V8L6 9 4 6z" stroke-linejoin="round" stroke-linecap="round"/></svg>
     <div class="anim-element anim-fade-up delay-1 info-title sparkle-container">
@@ -552,9 +628,9 @@ document.querySelectorAll('.bubble-layer').forEach(l=>makeBubbles(l,42,5,30));
   requestAnimationFrame(frame);
 })();
 
-// --- CUENTA ATRÁS (27 feb 2027, 7:00 p.m. hora Hidalgo UTC-6) ---
+// --- CUENTA ATRÁS (27 feb 2027, 5:00 p.m. misa, hora Hidalgo UTC-6) ---
 (function(){
-  const target=new Date("2027-02-27T19:00:00-06:00").getTime();
+  const target=new Date("2027-02-27T17:00:00-06:00").getTime();
   const ids=['cd-days','cd-hours','cd-minutes','cd-seconds'].map(id=>document.getElementById(id));
   const pad=n=>String(n).padStart(2,'0');
   function tick(){
